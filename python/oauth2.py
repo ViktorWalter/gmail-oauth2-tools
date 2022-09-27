@@ -325,9 +325,9 @@ def main(argv):
     authorization_code = input('Enter verification code: ')
     response = AuthorizeTokens(options.client_id, options.client_secret,
                                 authorization_code)
-    print('Refresh Token: %s', response['refresh_token'])
-    print('Access Token: %s', response['access_token'])
-    print('Access Token Expiration Seconds: %s', response['expires_in'])
+    print('Refresh Token: ', response['refresh_token'])
+    print('Access Token: ', response['access_token'])
+    print('Access Token Expiration Seconds: ', response['expires_in'])
   elif options.test_imap_authentication:
     RequireOptions(options, 'user', 'access_token')
     TestImapAuthentication(options.user,
